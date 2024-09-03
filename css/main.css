@@ -1,0 +1,258 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {/* 背景图片 */
+	background-image: url(../img/background.jpg);
+	background-size: cover;
+	background-position: center;
+	color: #fff;
+}
+
+.container {/* 大体 */
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #4c8bf5;
+  flex-wrap: wrap;
+}
+
+h1 {/* 一词专用 */
+  font-size: 15px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0;
+  padding: 20px 40px;
+  border-radius: 5px;
+  background-color: #1a5bbf;
+}
+
+header h1 {/* 一词专用 */
+	font-size: 36px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+form[id=search-form] {/* 搜索 */
+	display: flex;
+}
+
+input[type="text"] {/* 搜索 */
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+button[type="submit"] {/* 搜索 */
+  padding: 8px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #333333;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+main {/* 主体 */
+	padding: 20px;
+}
+
+.row {/* 图片排 */
+	display: flex;
+	flex-wrap: wrap;
+	margin: -10px;
+}
+
+.col {/* 图片列 */
+	flex: 1;
+	margin: 10px;
+	position: relative;
+}
+
+.col img {/* 图片 */
+	display: block;
+	width: 100%;
+	height: auto;
+	transition: opacity 0.3s;
+}
+
+.col h2 {/* 图片说明 */
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 10px;
+	background-color: rgba(0, 0, 0, 0.5);
+	font-size: 18px;
+	font-weight: bold;
+	transition: bottom 0.3s;
+}
+
+.col:hover img {/* 图片 */
+	opacity: 0.8;
+}
+
+.col:hover h2 {/* 图片 */
+	bottom: -50px;
+}
+
+
+@media screen and (max-width: 767px) {/* 适应性设置 */
+	.col {
+		flex-basis: 100%;
+	}
+}
+
+.footer{/* 标语 */
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px;
+	background-color: #1a5bbf;
+	flex-wrap: wrap;
+}
+
+.logo{/* logo.jpg */
+     text-align: center; 
+	 padding: 20px;
+}
+
+.txt{/* 字 */
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px;
+	background-color: #4c8bf5;
+	flex-wrap: wrap;
+	flex-direction: column;
+	margin: 30px ;
+}
+
+.txt p {
+	font-size: 30px;
+	font-weight: bold;
+	color: aquamarine;
+}
+
+.txt a{
+	display: block;
+    color: aquamarine; /* 链接文字颜色 */
+    text-decoration: none; /* 去掉下划线 */
+    padding: 15px; /* 链接文字内边距 */
+	font-size: 20px;
+	font-weight: bold;
+}
+
+nav {
+    background-color: #1a5bbf; /* 导航栏背景色 */
+  }
+nav ul {
+    list-style: none; /* 去掉列表样式 */
+    margin: 0;
+    padding: 0;
+    display: flex; /* 设置为弹性盒子 */
+  }
+nav li {
+    margin: 0 10px; /* 菜单项间距 */
+  }
+nav a {
+    display: block;
+    color: #fff; /* 链接文字颜色 */
+    text-decoration: none; /* 去掉下划线 */
+    padding: 15px; /* 链接文字内边距 */
+    transition: background-color 0.3s ease; /* 鼠标移入时背景色渐变 */
+  }
+nav a:hover {
+    background-color: #ffffff90; /* 鼠标移入时背景色 */
+  }
+nav p{
+	display: block;
+    color: #fff; /* 链接文字颜色 */
+    text-decoration: none; /* 去掉下划线 */
+    padding: 4px; /* 链接文字内边距 */
+    transition: background-color 0.3s ease; /* 鼠标移入时背景色渐变 */
+}
+
+.content {/* 其他下载中的盒子 */
+	display: flex; /* 设置为弹性盒子 */
+	align-items: center; /* 垂直居中 */
+	background-color: #4c8bf5; /* 块的背景色 */
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* 添加阴影效果 */
+	padding: 30px; /* 内边距 */
+	border-radius: 5px; /* 边框圆角 */
+	width: 75%;/*宽度*/
+	margin: 3em;/*框架距离*/
+  }
+  .content img {/* 盒中图 */
+	width: 240px; /* 图片宽度 */
+	margin-right: 30px; /* 图片与内容之间的间距 */
+  }
+  .content .content1 h5 {/* 盒中标题 */
+	margin: 0;
+	font-size: 24px; /* 标题字体大小 */
+	color: rgb(0, 0, 0); /* 标题颜色 */
+  }
+  .content .content1 p {/* 盒中内容 */
+	margin: 10px 0 0; /* 内容与标题的间距 */
+	font-size: 16px; /* 内容字体大小 */
+	line-height: 1.5; /* 行高 */
+	color: rgb(255, 255, 255); /* 内容颜色 */
+  }
+  .content a{
+	display: block;
+    color: aquamarine; /* 链接文字颜色 */
+    text-decoration: none; /* 去掉下划线 */
+    padding: 15px; /* 链接文字内边距 */
+    transition: background-color 0.3s ease; /* 鼠标移入时背景色渐变 */
+  }
+.login {/*登陆界面 */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	background-color: #4c8bf5;
+	flex-wrap: wrap;
+	flex-direction: column;
+	margin: 30px auto;
+	width: 50%;
+}
+
+.page {
+  display: none;
+  text-align: center;
+  margin-top: 30px;
+}
+.page.active {
+  display: block;
+}
+.page img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  margin-top: 20px;
+}
+.buttons {
+  text-align: center;
+  margin-top: 30px;
+  color: #000;
+}
+.buttons button {
+  margin-right: 20px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* */
